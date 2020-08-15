@@ -45,6 +45,9 @@ const connect = async () => {
 const disconnect = async () => {
   console.log("Closing serial connection.")
   
+  // Turn the light off before disconnecting.
+  writeToStream(0)
+  
   // Close the input stream.
   if (reader) {
     await reader.cancel()
