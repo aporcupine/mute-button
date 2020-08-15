@@ -1,0 +1,22 @@
+{
+    "name": "Mute Button!",
+    "version": "0.5",
+    "icons": {
+        "16": "/img/icons/icon_16.png",
+        "48": "/img/icons/icon_48.png",
+        "128": "/img/icons/icon_128.png",
+        "256": "/img/icons/icon_256.png"
+    },
+
+    "description": "Mute/un-mute your Google meet calls with a Arduino connected button!",
+
+    "content_scripts": [
+        {
+            "matches": ["https://meet.google.com/*"],
+            "js": [
+                    "/js/content_script.js"
+                ]
+        }
+    ],
+    "manifest_version": 2
+}
